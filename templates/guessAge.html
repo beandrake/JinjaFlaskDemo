@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+	<meta charset="UTF-8">
+	<!-- For Flask, static resources must be somewhere in the static directory. -->
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<title>Le Title</title>
+</head>
+<body>
+	<h1>
+		Age that Name!
+	</h1>
+
+	<!-- For Flask, static resources must be somewhere in the static directory. -->
+	<img src="static/img/dinosaur.png" alt="a good dinosaur">
+
+	<!-- Flask comes with Jinja -->
+	<!-- This allows content in 2x curly brackets to be evaluated as Python code -->
+	<p>Statistically, someone with the name {{name}} is most likely to be {{age}} years old.</p>
+	<p>That's not especially valuable information, is it?</p>
+	<p>You can replace the name in the URL to guess a different name.</p>
+</body>
+<footer>
+	This page is copyrighted as of the current year, which is {{ currentYear }} in case you were wondering.
+</footer>
+</html>

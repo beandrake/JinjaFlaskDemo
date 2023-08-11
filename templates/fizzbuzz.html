@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+	<meta charset="UTF-8">
+	<!-- For Flask, static resources must be somewhere in the static directory. -->
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<title>fizzbuzz</title>
+</head>
+<body>
+	<!-- If you want to do multi-line code, you can put each line of the multi-line code in curly braces with percents. -->
+	<!-- But the functionality is limited; see here for more info: https://jinja.palletsprojects.com/en/3.1.x/templates/#assignments -->
+	{% set o = namespace(output = '') %}
+	{% set t = namespace(tagValue = 3) %}
+	{% for i in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) %}
+		{% set o.output = '' %}
+		{% set t.tagValue = 3 %}
+		{% if i%3 == 0 %}
+			{% set o.output = o.output + 'fizz' %}
+			{% set t.tagValue = t.tagValue - 1 %}
+		{% endif %}
+		{% if i%5 == 0 %}
+			{% set o.output = o.output + 'buzz' %}
+			{% set t.tagValue = t.tagValue - 1 %}
+		{% endif %}	
+		{% if o.output == '' %}
+			{% set o.output = i %}
+		{% endif %}
+		<h{{ t.tagValue }}>{{ o.output }}</h{{ t.tagValue }}>
+	{% endfor %}	
+</body>
+<footer>
+	This page is copyrighted as of the current year, which is {{ currentYear }} in case you were wondering.
+</footer>
+</html>

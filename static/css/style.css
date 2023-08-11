@@ -1,0 +1,17 @@
+
+html,
+body {
+    background-color: #fff;
+    color: #555555;
+    
+    /* 1st choice, 2nd choice, default */
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    
+    /* the base size that all other relative sizes are based on */
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    
+    /* hides content that overflows on the X-axis */
+    overflow-x: hidden;
+}
